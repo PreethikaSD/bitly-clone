@@ -1,18 +1,32 @@
-<form action="/urls" method="post">
-	Enter URL:
-	<input type="text" name="long_url">
-	<input type="submit" value="Submit">
-</form>
+<h1>unleash the power of the link</h1>
+<div id='navbar-form'>
+  	<form  action="/urls" method="post" >
+		Enter URL:
+			<input type="text" name="long_url" id="url" placeholder="https://www.google.com">
+			<input type="submit" value="Submit" class="submit">
+			</form>
+</div>
+<div class="message">
 <%if @messages !=nil%>
 	<%@messages.each do |message| %>
-	<%= message %>
+	<div class="red"><%= message %></div>
 	<% end %>
 <% end %>
+</div>
+<button type="button" class="hide">Hide url</button>
+<button type="button" class="show">Show url</button>
 
-<table>
-	<% Url.all.each do |url| %>
+<table class="table">
 	<tr>
-		<td><%= url.short_url %></td>
+		<th>Shortened Url</th>
+		<th>Long Url</th>
 	</tr>
-	<% end %>
+	<% url = Url.last%>		
+		<tr>
+			<td><a href="<%=url.short_url%>" target="_blank"> <%=url.short_url%></a></td>
+			<td><a href="<%= url.long_url %>" target="_blank"> <%=url.long_url%></a></td>
+		</tr>
 </table>
+
+
+

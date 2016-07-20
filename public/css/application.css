@@ -1,0 +1,83 @@
+.header{
+	color: red;
+	font-style: italic;
+	font-size: 20px;
+}
+
+body{
+	background-color: lightblue;
+}
+
+.container{
+
+}
+
+.red{
+	color: red;
+}
+
+.formbox{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.message{
+	text-align: center;
+}
+
+#url{
+	height: 40px;
+	width: 300px;
+	text-align: center;
+}
+
+.submit{
+    padding: 0;
+    color: red;
+    width: 70px;
+    height: 40px;
+    border: none;
+    text-align: center;
+}
+ul{
+	list-style-type: none;
+	margin-top: 10px;
+	padding-top: 20px;
+	background-color: white;
+	overflow: hidden;
+}
+
+li{
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.active{
+	background-color: #4CAF50;
+}
+
+#navbar-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+table {
+    width: 20%;  
+}
+ th, td{
+ 	text-align: left;
+ 	border-bottom: 1px solid #ddd;
+ 	font-size: 12px;
+
+ }
+
+h1{
+	text-align: center;
+	color: green;
+	text-transform: uppercase;
+}
+
