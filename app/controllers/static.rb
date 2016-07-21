@@ -1,5 +1,3 @@
-#enable :sessions
-require 'byebug'
 get '/' do
 	@url = Url.all
 	#@messages = session[:errors]
