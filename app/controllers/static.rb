@@ -1,15 +1,20 @@
-enable :sessions
+#enable :sessions
 require 'byebug'
 get '/' do
 	@url = Url.all
-	@messages = session[:errors]
+	#@messages = session[:errors]
 	erb :"static/index"
 end
 
 post '/urls' do
-	url = Url.create(long_url: params[:long_url], short_url: Url.shorten)
-	session[:errors] = url.errors.messages[:long_url]
-	redirect '/'	
+	@url = Url.new
+	@url.long_url = params[:long_url]
+	@url.save
+	if @url.valid?
+		@url.to_json
+	else 
+		@url.errors.messages[:long_url][0].to_json
+	end
 end
  
 

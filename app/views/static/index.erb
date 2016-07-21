@@ -1,18 +1,13 @@
 <h1>unleash the power of the link</h1>
 <div id='navbar-form'>
-  	<form  action="/urls" method="post" >
+  	<form  action="/urls" method="post" id="formsubmit">
 		Enter URL:
 			<input type="text" name="long_url" id="url" placeholder="https://www.google.com">
 			<input type="submit" value="Submit" class="submit">
 			</form>
 </div>
-<div class="message">
-<%if @messages !=nil%>
-	<%@messages.each do |message| %>
-	<div class="red"><%= message %></div>
-	<% end %>
-<% end %>
-</div>
+<div id="result">Shortened link</div>
+
 <button type="button" class="hide">Hide url</button>
 <button type="button" class="show">Show url</button>
 
